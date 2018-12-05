@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale =1">
-
 <head>
-  <meta charset="utf-8">
-  <title>GifTastic</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<title>GifTastic</title>
+	<!-- link to stylesheet -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
 
 </head>
 
 <body>
+<div class = "container">
+	<h1>Click a button to display the top gifs of its category, or add a topic of your own!</h1>
+	<br><br>
+	<div id="topic-form">
+		<label for="topic-input">Add another topic</label>
+		<input type="text" id="topic-input">
+		
+		<input id="addTopic" type="submit">
+	</form>
+  <br><br>
+  <div id="buttonsView"></div>
+  <br><br>
+</div>
+<div id="gifsView">
+</div>
 
-  <div class="container">
-    <div class="row">
-      <div id="buttons-view"></div>
-    </div>
+</div>
 
-    <div class="row">
-      <div class="col-8">
-        <div id="gif-view"></div>
-      </div>
-      <div class="col-4">
-        <form id="search-form">
-          <div class="form group">
-              <label class="form-label" for="search-input">Search.</label>
-              <br>
-              <input class="form-control" type="text" id="search-input">
-          </div>
-          <button class="btn btn-primary" id="add-button" type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+<script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>

@@ -1,36 +1,47 @@
 body {
     background-image: url('../images/spirationdark.png');
     width: 100%;
+    color: white;
   }
   button {
     padding: 0 2%;
-    margin: 0 2%;
+    margin-left: 10%;
+    margin-bottom: 15px;
   }
-  h4 {
-    font-size: 165%;
+  h1 {
+    font-size: 250%;
     font-weight: bold;
     color: white;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
   }
   .container {
     background-color: rgba(0, 0, 0, 0.2);
     max-width: 1000px;
     width: 100%;
+    margin-left: 20%;
   }
-  .btn {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    font-size: 125%;
-    font-weight: bold;
-  } 
-  .guide {
-    padding: 3% 0 0 0;
+
+  .gifs {
+    display: inline-block;
+    margin: 15px;
   }
-  .tag-row {
-    padding: 3% 0 0 0;
+
+  #topic-form {
+    font-family: 'Luckiest Guy', cursive;
+    margin-left: 30%;
+    margin-bottom: 20%;
   }
-  .category-row {
-    padding: 3% 0 ;
+
+  #buttonsView {
+    display: inline;
   }
-  #photo {
-    padding-bottom: 3%;
+
+  #gifsView {
+    display: inline;
   }
+
+  #topic-form {
+    display: inline;
+  }
+
