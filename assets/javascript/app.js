@@ -1,4 +1,4 @@
-var topics = ["Hank Hill", "Bobby Hill", "Dale Gribble", "Ladybird"];
+var topics = ["The Simpsons", "King of the Hill", "Home Movies", "Mission Hill"];
 
 function makeButtons() {
     $('#buttonsView').empty();
@@ -19,7 +19,7 @@ $('#addTopic').on('click', function() {
     var topic = $('#topic-input').val().trim();
     //pushes input into array
     topics.push(topic);
-    console.log(topic);
+    //console.log(topic);
     //renders all buttons plus user added buttons
     makeButtons();
     //user can hit Enter key instead of clicking submit
@@ -39,7 +39,7 @@ $('#addTopic').on('click', function() {
     }).then(function(response) {
         console.log(response);
         var results = response.data;
-
+        // loop through each gif and add variables
         for (var i = 0; i < results.length; i++) {
             var gifDiv = $('<div class=gifs>');
             var topicGif = $('<img>');
@@ -60,7 +60,7 @@ $('#addTopic').on('click', function() {
     });
 } 
 
-// function for animating gifs
+// stop/start gifs 
 $(document).on('click', '.gif', function(){
 	var state = $(this).attr('data-state');
 		if ( state == 'still'){
@@ -74,7 +74,7 @@ $(document).on('click', '.gif', function(){
 
 
 
-// function for displaying topic gifs
+// displaying topic gifs
 $(document).on("click", ".topic", displayGifs);
 
 // initially calls the makeButtons function
