@@ -2,19 +2,25 @@ var topics = ["The Simpsons", "King of the Hill", "Home Movies", "Mission Hill"]
 
 function makeButtons() {
     $('#buttonsView').empty();
-
+    // loops through topics and creates buttons with these attributes, adds them to buttonsView
     for (var i = 0; i < topics.length; i++){
-        var a = $('<button>')
+        //generates buttons dynamically
+        var a = $('<button>');
+        //adds class 'topic'
         a.addClass('topic');
+        //adds attribute for data based on topics integer
         a.attr('data-name', topics[i]);
+        //provdes button text
         a.text(topics[i]);
+        //adds button to HTML
         $('#buttonsView').append(a);
 
     }
 }
 
-
-$('#addTopic').on('click', function() {
+//when a button is clicked
+$('#addTopic').on("click", function(event) {
+    event.preventDefault();
     //grabs user input
     var topic = $('#topic-input').val().trim();
     //pushes input into array
@@ -22,9 +28,13 @@ $('#addTopic').on('click', function() {
     //console.log(topic);
     //renders all buttons plus user added buttons
     makeButtons();
-    //user can hit Enter key instead of clicking submit
-    return false;
-})
+    //user can hit Enter key instead of clicking submit    
+    $("#topic-input").val("");
+
+    return false
+});
+
+
 
 //displays gifs
 
