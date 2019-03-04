@@ -1,4 +1,4 @@
-# giftastic
+# Giftastic
 A GIF searching app 
 
 ## How the app works
